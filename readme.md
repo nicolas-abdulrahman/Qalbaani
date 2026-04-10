@@ -1,4 +1,4 @@
-# Qalbaani 
+# Qalbaani
 
 ### *Two hearts connected*
 
@@ -29,4 +29,17 @@ The project utilizes a **monorepo** structure to facilitate synchronized version
 
 ### 4. Development Status
 > **Note**: This is a **learning project**.
-> * The code is not intended
+> * The code is not intended for production environments.
+> * Features are implemented for logic testing and exploring new tools.
+> * The current focus is the stability of communication between the Android client and the Rust backend.
+
+---
+
+### 5. Setup and Execution
+
+#### 5.1. Backend (Rust)
+Ensure you have `rustc` and `cargo` installed.
+1. Navigate to the directory: `cd backend`
+2. Run the server in development mode:
+   ```bash
+   cargo run
