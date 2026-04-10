@@ -1,41 +1,32 @@
-# [Qalbaani]
+# Qalbaani 
 
-### 1. Descrição do Projeto
-Este repositório contém um projeto de caráter estritamente **educacional e experimental**. O objetivo principal é o estudo da integração entre uma interface mobile nativa e um servidor de alta performance utilizando a linguagem **Rust**.
-
-A aplicação funciona como um chat em tempo real, servindo como laboratório para práticas de arquitetura de sistemas, gerenciamento de estado e comunicação via rede.
+### *Two hearts connected*
 
 ---
 
-### 2. Arquitetura do Sistema
-O projeto utiliza uma estrutura de **monorepo**, facilitando o versionamento sincronizado entre as duas frentes de desenvolvimento:
+### 1. Project Description
+This repository contains a strictly **educational and experimental** project. The primary objective is to study the integration between a native mobile interface and a high-performance server using the **Rust** programming language.
 
-* **/android**: Frontend nativo desenvolvido especificamente para a plataforma **Android** via Android Studio. (Nota: Atualmente, o suporte é exclusivo para Android).
-* **/backend**: Servidor de alta performance desenvolvido em **Rust**, focado em segurança de memória e concorrência.
+The application functions as a private, one-on-one chat platform, serving as a laboratory for practicing systems architecture, state management, and network communication.
 
 ---
 
-### 3. Pilha Tecnológica
+### 2. System Architecture
+The project utilizes a **monorepo** structure to facilitate synchronized versioning between the two development fronts:
+
+* **/android**: Native frontend developed specifically for the **Android** platform using Android Studio. (Note: Currently, support is exclusive to Android).
+* **/backend**: High-performance server developed in **Rust**, focused on memory safety and efficient concurrency.
+
+---
+
+### 3. Tech Stack
 * **Mobile**: Kotlin / Android SDK
-* **Servidor**: Rust (Tokio / Axum ou Actix-web)
-* **Protocolo de Comunicação**: JSON via HTTP / WebSockets
-* **Gerenciamento de Dependências**: Cargo (Rust) e Gradle (Android)
+* **Server**: Rust (utilizing frameworks like Tokio / Axum or Actix-web)
+* **Communication Protocol**: JSON via HTTP / WebSockets
+* **Dependency Management**: Cargo (Rust) and Gradle (Android)
 
 ---
 
-### 4. Status de Desenvolvimento
-> **Nota de Observação**: Este é um **projeto de aprendizado**.
-> * O código não é destinado a ambientes de produção.
-> * As funcionalidades são implementadas para fins de teste de lógica e exploração de ferramentas.
-> * O foco atual é a estabilidade da comunicação entre o cliente Android e o servidor Rust.
-
----
-
-### 5. Configuração e Execução
-
-#### 5.1. Backend (Rust)
-É necessário ter o `rustc` e o `cargo` instalados.
-1. Acesse o diretório: `cd backend`
-2. Execute o servidor em modo de desenvolvimento:
-   ```bash
-   cargo run
+### 4. Development Status
+> **Note**: This is a **learning project**.
+> * The code is not intended
