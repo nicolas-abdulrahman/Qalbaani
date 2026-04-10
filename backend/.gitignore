@@ -1,0 +1,7 @@
+/target
+/my-db.bonsaidb
+/assets
+/ChatRooms
+log*
+Cargo.lock
+*.png

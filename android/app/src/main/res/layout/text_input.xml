@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical">
+    <com.example.myapplication4.CustomBackground
+        android:id="@+id/vi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:bubbleColor="#E7E7E7"
+        app:bubbleStrokeColor="#ADC7FF"
+        app:bubbleStrokeWidth="8.0"
+       >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="heaaafadawdasaacawaaadwa" />
+    </com.example.myapplication4.CustomBackground>
+
+
+    <com.example.myapplication4.CustomInputView
+        android:id="@+id/accelerate"
+        android:layout_width="203dp"
+        android:layout_height="300dp"
+        android:lineBreakStyle="normal"
+        android:singleLine="true"
+        android:text="as whooper"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:bubbleColor="#E7E7E7"
+        app:bubbleStrokeColor="#ADC7FF"
+        app:bubbleStrokeWidth="8.0"
+        app:backgroundEnabled = "false"
+
+        app:customColor="#48B1D1"
+        app:customSize="10sp"
+
+
+
+        />
+
+    <com.example.myapplication4.Speedometer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:borderColor="@color/grey"
+        app:fillColor="@color/blue" />
+
+    <com.example.myapplication4.CircularImageView2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/haya"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aaaaaa"/>
+
+
+
+</LinearLayout>

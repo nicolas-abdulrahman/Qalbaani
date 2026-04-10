@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatFrame"
+    android:id="@+id/root">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/basee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sil7flop"
+        app:civ_border_color="#A7A7A7"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#222222"
+        app:civ_shadow_radius="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bubble_right"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="5sp"
+            android:text="  haya"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            app:allowItalic="false"
+            app:backgroundEnabled="false"
+
+
+            />
+
+        <View
+            android:id="@+id/ChatLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/name"
+            android:background="@android:color/black"
+            android:layout_marginEnd="20dp"/>
+
+        <com.example.myapplication4.CustomInputView
+            android:id="@+id/textMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            app:backgroundEnabled="false"
+            android:layout_marginLeft="2sp"
+
+            android:layout_marginRight="2sp"
+            android:layout_marginBottom="2sp"
+
+            android:text="you baka! *bonks you* >:c" />
+     </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/chatLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+<include
+
+    layout="@layout/friends"
+    android:id="@+id/friendsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="83dp"
+    android:layout_margin="20dp"
+    app:layout_constraintTop_toBottomOf="@id/profile_layout"
+    app:layout_constraintLeft_toLeftOf="parent"/>
+
+<RelativeLayout
+    android:id="@+id/banner"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/grey"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    >
+
+
+</RelativeLayout>
+<com.mikhaellopez.circularimageview.CircularImageView
+    android:id="@+id/profile_image_view"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/sil7flop"
+    app:layout_constraintBottom_toBottomOf="@id/banner"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/banner"
+    android:layout_marginLeft="30dp"
+
+
+    />
+
+<RelativeLayout
+    android:id="@+id/profile_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/profile_image_view"
+    android:layout_margin="20dp"
+    android:background="@drawable/round_bubble"
+    android:backgroundTint="#FFC5EB"
+    android:paddingBottom="10dp"
+    >
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Haya da cute pon"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/profile_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_name"
+
+        android:layout_marginLeft="30dp"
+        android:alpha="0.5"
+        android:text="haya"
+        />
+    <View
+        android:id="@+id/ChatLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/profile_username"
+        android:background="@android:color/black"
+        android:alpha="0.2"
+        android:layout_marginEnd="20dp"/>
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/profile_name"
+        android:layout_below="@id/ChatLine"
+
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+
+        />
+
+</RelativeLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="aaaaaaaaa"
+    android:textColor="@color/white"
+    android:layout_marginTop="10dp"
+
+    app:layout_constraintTop_toBottomOf="@id/profile_layout"
+    app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+<ImageView
+    android:id="@+id/profile_image_view_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/photo"
+    android:alpha="0.8"
+    app:layout_constraintBottom_toBottomOf="@id/profile_image_view"
+    app:layout_constraintLeft_toRightOf="@id/profile_image_view" />
+<TextView
+    android:id="@+id/logoutText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#FFEB13"
+    android:text="Log outo"
+    android:textSize="30sp"
+    app:layout_constraintRight_toLeftOf="@id/logoutIcon"
+    app:layout_constraintBottom_toBottomOf="@id/logoutIcon"
+    />
+<ImageView
+    android:id="@+id/logoutIcon"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    app:tint="#FF55E4"
+    android:src="@drawable/baseline_logout_24"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

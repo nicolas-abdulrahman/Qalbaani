@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.myapplication4.LockableScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rooot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cute"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <View
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:alpha="0.3"
+            android:background="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profile_image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:src="@drawable/sil7flop"
+            app:civ_border_color="#A7A7A7"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#222222"
+            app:civ_shadow_radius="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/profile_image_view_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/photo"
+            app:layout_constraintBottom_toBottomOf="@id/profile_image_view"
+            app:layout_constraintLeft_toRightOf="@id/profile_image_view" />
+
+        <com.example.myapplication4.CustomBackground
+            android:id="@+id/usernameBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image_view"
+
+
+            >
+
+            <com.example.myapplication4.TextInputWithBackground
+                android:id="@+id/usernameField"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15sp"
+
+
+                app:layout_constraintEnd_toEndOf="parent" />
+        </com.example.myapplication4.CustomBackground>
+
+        <TextView
+            android:id="@+id/usernameFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name:"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toLeftOf="@id/usernameBackground"
+            app:layout_constraintTop_toTopOf="@id/usernameBackground" />
+
+        <com.example.myapplication4.CustomBackground
+            android:id="@+id/nameBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/usernameBackground"
+            app:layout_constraintTop_toBottomOf="@id/usernameBackground"
+
+
+            >
+
+            <com.example.myapplication4.TextInputWithBackground
+                android:id="@+id/nameField"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:handwritingBoundsOffsetTop="20dp"
+                android:text=""
+                app:customColor="#48B1D1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/usernameBackground" />
+        </com.example.myapplication4.CustomBackground>
+
+        <TextView
+            android:id="@+id/nameFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="display name:"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toLeftOf="@id/nameBackground"
+            app:layout_constraintTop_toTopOf="@id/nameBackground" />
+
+        <com.example.myapplication4.CustomBackground
+            android:id="@+id/passwordBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/nameBackground"
+            app:layout_constraintTop_toBottomOf="@id/nameBackground"
+
+
+            >
+
+            <com.example.myapplication4.TextInputWithBackground
+                android:id="@+id/passwordField"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:handwritingBoundsOffsetTop="20dp"
+                android:inputType="textPassword"
+
+                android:singleLine="true"
+
+                android:text=""
+                app:customColor="#48B1D1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameField" />
+        </com.example.myapplication4.CustomBackground>
+
+        <TextView
+            android:id="@+id/passwordFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="password:"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@id/passwordBackground"
+            app:layout_constraintTop_toTopOf="@id/passwordBackground" />
+
+        <LinearLayout
+            android:id="@+id/nameColorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/empty_square"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordBackground">
+
+            <TextView
+                android:id="@+id/nameColorLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="name color: "
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/nameColorSquare"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/square"
+                android:padding="20dp"
+                app:initialColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordField"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rpColorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/empty_square"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordBackground">
+
+            <TextView
+                android:id="@+id/rpColorLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="italic color: "
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/rpColorSquare"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/square"
+                android:padding="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordField"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/textColorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/empty_square"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rpColorLayout">
+
+            <TextView
+                android:id="@+id/textColorLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="text color: "
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/textColorSquare"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/square"
+                android:padding="20dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordField"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bubbleColorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/empty_square"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameColorLayout">
+
+            <TextView
+                android:id="@+id/bubbleColorLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="bubble color: "
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/bubbleColorSquare"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+
+                android:background="@drawable/square"
+                android:padding="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:paddingBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@id/registerButton"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <include
+                android:id="@+id/fragy"
+                layout="@layout/chat_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bubbleColorLayout"
+
+                />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/aaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aaaa"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/registerButton" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="128dp"
+            android:layout_height="67dp"
+            android:layout_marginBottom="164dp"
+            android:text="Register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/OrLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="  or\nlogin"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="@id/registerButton"
+            app:layout_constraintRight_toRightOf="@id/registerButton"
+            app:layout_constraintTop_toBottomOf="@id/registerButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.example.myapplication4.LockableScrollView>

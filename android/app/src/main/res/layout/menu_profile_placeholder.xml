@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_profile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey">
+
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/profile_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:src="@drawable/defaulty"
+        app:civ_border_color="#A7A7A7"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#222222"
+        app:civ_shadow_radius="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/menu_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="uknown_name"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profile_image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.266" />
+    <LinearLayout
+        android:id="@+id/name_profile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_profile_name"
+        app:layout_constraintLeft_toLeftOf="@+id/menu_profile_name"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/menu_profile_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="i like bananas"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/menu_profile_name"
+            app:layout_constraintLeft_toLeftOf="@+id/menu_profile_name"
+            android:textColor="#2E46E0"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

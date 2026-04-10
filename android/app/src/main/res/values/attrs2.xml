@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomInputView">
+        <!-- BORDER -->
+        <attr name="customSize" format="dimension" />
+        <attr name="customColor" format="color"/>
+        <attr name="text" format="string"/>
+        <attr name="bubbleColor" format= "color"/>
+        <attr name="bubbleStrokeColor" format = "color" />
+        <attr name="bubbleStrokeWidth" format="float" />
+        <attr name="backgroundEnabled" format="boolean"/>
+        <attr name="allowItalic" format="boolean"/>
+        <attr name="lineBreak" format="enum">
+            <enum name="SingleChar" value = "0"/>
+            <enum name="WrapWord" value = "1"/>
+        </attr>
+
+
+    </declare-styleable>
+</resources>
